@@ -73,7 +73,7 @@ jobs:
 
     - name: Trigger Render redeploy
       run: |
-        curl -X POST ${{secrets.RENDER_DEPLOY_HOOK}}/events-api:latest
+        curl -fsS -X POST ${{secrets.RENDER_DEPLOY_HOOK}}
 
     - name: Smoke test against Render
       run: |
