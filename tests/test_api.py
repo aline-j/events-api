@@ -162,6 +162,7 @@ def test_create_event_fails_without_title(base_url, auth_token):
 
 
 def test_login_fails_with_wrong_password(base_url):
+    """Test logging in with wrong password"""
     timestamp = int(time.time() * 1000)
     username = f"user{timestamp}"
     password = "correctpassword"
